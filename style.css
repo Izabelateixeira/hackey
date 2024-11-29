@@ -1,0 +1,149 @@
+
+:root {
+  --background-color: linear-gradient(45deg, #8B0000, #FF4500, #FF0000);
+  --text-color: white;
+  --secondary-text-color: #ccc;
+  --footer-bg-color: rgba(0, 0, 0, 0.8);
+  --font-family: Arial, sans-serif;
+  --heading-font-family: 'Irish Grover', cursive;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: var(--footer-bg-color);
+}
+
+header nav {
+  display: flex;
+  gap: 15px;
+}
+
+header nav a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+header nav a:hover {
+  color: var(--secondary-text-color);
+}
+
+
+.logo img {
+  width: 50px;
+  height: auto;
+  transition: transform 0.3s;
+}
+
+.logo img:hover {
+  transform: scale(1.1); 
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+}
+
+.image {
+  flex: 1;
+  min-width: 250px;
+  max-width: 500px;
+  margin: 10px;
+}
+
+.image img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.content {
+  flex: 1;
+  max-width: 600px;
+  margin: 10px;
+}
+
+.content h1 {
+  font-size: 36px;
+  font-family: var(--heading-font-family);
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  color: var(--text-color);
+}
+
+.content p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  display: block;
+  margin: 0 auto;
+  max-width: 200px;
+  transition: transform 0.3s;
+}
+
+.cta-button:hover {
+  transform: scale(1.1);
+}
+
+
+footer {
+  text-align: center;
+  padding: 15px;
+  background-color: var(--footer-bg-color);
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--secondary-text-color);
+}
+
+footer a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; 
+    text-align: center; 
+  }
+
+  .content h1 {
+    font-size: 28px;
+  }
+
+  .content p {
+    font-size: 14px;
+  }
+
+  .cta-button {
+    max-width: 150px; 
+  }
+}
